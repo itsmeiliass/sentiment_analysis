@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+ body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        
+        .container {
+          max-width: 500px;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+          color: blue;
+          text-align: center;
+          
+        }
+        
+        p {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        
+        
+    </style>        
+    <title>Sentiment Analysis Result</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Result</h1>
+    <p>Text: " {{ text }} "</p>
+    
+    <p style="color:
+  {% if sentiment == 'Positive' %}
+    green;
+  {% elif sentiment == 'Negative' %}
+    red;
+  {% elif sentiment == 'Neutral' %}
+    gray;
+  {% else %}
+    black; /* Default color if sentiment is not defined */
+  {% endif %}
+">
+   {{ sentiment }}
+</p>
+    </div>
+</body>
+</html>
